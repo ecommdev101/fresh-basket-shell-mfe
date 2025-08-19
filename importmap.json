@@ -1,0 +1,9 @@
+ {
+      "imports": {
+       
+        "@sp/root-config": "https://d3s7fg7zimx95l.cloudfront.net/fresh-basket-shell-mfe/sp-root-config.js",
+        "@sp/fresh-basket-user-mfe": "https://d3s7fg7zimx95l.cloudfront.net/fresh-basket-user-mfe/sp-fresh-basket-user-mfe.js",
+         "@sp/fresh-basket-productcatalog-mfe": "https://d3s7fg7zimx95l.cloudfront.net/fresh-basket-productcataglog-mfe/sp-fresh-basket-productcatalog-mfe.js"
+
+      }
+    }

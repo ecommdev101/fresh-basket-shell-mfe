@@ -1,0 +1,15 @@
+<single-spa-router>
+  <main>
+    <redirect from="/" to="/user"></redirect>
+
+    <!-- User MFE -->
+    <route path="user">
+      <application name="@sp/fresh-basket-user-mfe"></application>
+    </route>
+
+    <!-- Product Catalog MFE nested under user/admin/products -->
+    <route path="admin/products/*">
+      <application name="@sp/fresh-basket-productcatalog-mfe"></application>
+    </route>
+  </main>
+</single-spa-router>
