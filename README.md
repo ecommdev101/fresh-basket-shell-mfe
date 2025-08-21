@@ -1,20 +1,13 @@
 # fresh-basket-shell-mfe
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: docker-demo
+  name: docker-demo-service
 spec:
-  replicas: 1
+  type: LoadBalancer
   selector:
-    matchLabels:
-      app: docker-demo
-  template:
-    metadata:
-      labels:
-        app: docker-demo
-    spec:
-      containers:
-      - name: docker-demo
-        image: 590181219128.dkr.ecr.ap-south-1.amazonaws.com/docker-demo:v1
-      imagePullSecrets:
-      - name: ecr-secret
+    app: docker-demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9200
